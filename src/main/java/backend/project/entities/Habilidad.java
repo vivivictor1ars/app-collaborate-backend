@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name="habilidad")
-public class Habilidades {
+public class Habilidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

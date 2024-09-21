@@ -36,6 +36,8 @@ public class Habilidad {
         this.descripcion_Habilidad = descripcion_Habilidad;
     }
 }
+
+//se cambia y se pone Habilidad por Requisito
 /*
 import javax.persistence.*;
 

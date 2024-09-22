@@ -1,19 +1,39 @@
 package backend.project.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
-@Table(name="carrera")
+@Table(name = "Carreras")
 public class Carrera {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
+    @Column(name = "nombre_Carrera", length = 60, nullable = false)//largo de 60 y es obligatorio
+    private  String nombre_Carrera;
 
-    private String name;
+    public Carrera(){
+
+    }
+    public Carrera(int id, String nombre_Carrera) {
+        this.id = id;
+        this.nombre_Carrera = nombre_Carrera;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre_Carrera() {
+        return nombre_Carrera;
+    }
+
+    public void setNombre_Carrera(String nombre_Carrera) {
+        this.nombre_Carrera = nombre_Carrera;
+    }
+
+
 }

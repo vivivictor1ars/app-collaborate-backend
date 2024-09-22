@@ -14,9 +14,8 @@ public class Institucion {
 
     private  String correo_Institucion;
 
-    public Institucion(){
+    public Institucion(){}
 
-    }
     public Institucion(int id, String nombre_Institucion, String correo_Institucion){
         this.id = id;
         this.nombre_Institucion = nombre_Institucion;

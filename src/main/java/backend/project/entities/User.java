@@ -25,8 +25,8 @@ public class User {
 
     @Column(name="rol",length = 60,nullable = false)
     private String rol;
-    public User() {
-    }
+
+    public User() {}
 
     public User(Long idUser, String username, String nombre_User, String contrasena_User, Boolean enabled, List<Role> roles, String rol) {
         this.idUser = idUser;

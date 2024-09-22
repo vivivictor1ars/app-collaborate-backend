@@ -24,8 +24,7 @@ public class Match {
     private Estudiante estudiante;
 
 
-    public Match() {
-    }
+    public Match() {}
 
     public Match(int id, int codigo_match, boolean confirmacion_match, Reclutador reclutador, Estudiante estudiante) {
         this.id = id;

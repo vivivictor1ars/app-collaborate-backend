@@ -23,9 +23,7 @@ public class Repositorio {
     @JoinColumn(name = "idEstudiante")
     private Estudiante estudiante;
 
-    public Repositorio(){
-
-    }
+    public Repositorio(){}
 
     public Repositorio(int id, String nombreRepositorio, String descripcionRepositorio, String enlaceRepositorio, LocalDate fechaRepositorio, Estudiante estudiante) {
         this.id = id;

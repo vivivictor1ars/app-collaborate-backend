@@ -30,8 +30,7 @@ public class Estudiante {
     @JoinColumn(name = "Usuario_id")
     private User user_Estudiante;
 
-    public Estudiante() {
-    }
+    public Estudiante() {}
 
     public Estudiante(int idEstudiante, int semestre_Estudiante, int edad_Estudiante, String genero_Estudiante, boolean practicante_Estudiante, String descripcion_Estudiante, Institucion institucion_Estudiante, User user_Estudiante) {
         this.idEstudiante = idEstudiante;

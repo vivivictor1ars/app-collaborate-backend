@@ -19,9 +19,7 @@ public class Carrera_Estudiante {
     @JoinColumn(name = "Carrera_id")
     private Carrera carrera;
 
-    public Carrera_Estudiante(){
-
-    }
+    public Carrera_Estudiante(){}
 
     public Carrera_Estudiante(int id, Estudiante estudiante, Carrera carrera) {
         this.id = id;

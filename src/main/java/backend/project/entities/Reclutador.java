@@ -20,9 +20,7 @@ public class Reclutador {
     @JoinColumn(name = "User_id")
     private User user;
 
-    public Reclutador(){
-
-    }
+    public Reclutador(){}
 
     public Reclutador(int id, String descripcion_Reclutador, Empresa empresa, User user) {
         this.id = id;

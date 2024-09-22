@@ -12,9 +12,8 @@ public class Carrera {
     @Column(name = "nombre_Carrera", length = 60, nullable = false)//largo de 60 y es obligatorio
     private  String nombre_Carrera;
 
-    public Carrera(){
+    public Carrera(){}
 
-    }
     public Carrera(int id, String nombre_Carrera) {
         this.id = id;
         this.nombre_Carrera = nombre_Carrera;

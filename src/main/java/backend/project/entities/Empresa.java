@@ -14,9 +14,7 @@ public class Empresa {
     @Column(name = "correo_Empresa", length = 60, nullable = false)//largo de 60 y es obligatorio(nullable)
     private  String correo_Empresa;
 
-    public Empresa(){
-
-    }
+    public Empresa(){}
 
     public Empresa(int id, String nombre_Empresa, String descripcion_Empresa, String correo_Empresa) {
         this.id = id;

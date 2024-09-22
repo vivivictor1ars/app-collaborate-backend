@@ -11,9 +11,7 @@ public class Habilidad {
     @Column(name = "descripcion_Habilidad", length = 60, nullable = false)//largo de 60 y es obligatorio(nullable)
     private  String descripcion_Habilidad;
 
-    public Habilidad(){
-
-    }
+    public Habilidad(){}
 
     public Habilidad(int id, String descripcion_Habilidad) {
         this.id = id;

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Carreras_Estudiante")
-public class Carreras_Estudiante {
+public class Carrera_Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,11 +19,11 @@ public class Carreras_Estudiante {
     @JoinColumn(name = "Carrera_id")
     private Carrera carrera;
 
-    public Carreras_Estudiante(){
+    public Carrera_Estudiante(){
 
     }
 
-    public Carreras_Estudiante(int id, Estudiante estudiante, Carrera carrera) {
+    public Carrera_Estudiante(int id, Estudiante estudiante, Carrera carrera) {
         this.id = id;
         this.estudiante = estudiante;
         this.carrera = carrera;

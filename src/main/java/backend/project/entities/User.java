@@ -20,7 +20,7 @@ public class User {
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "user_id")
     private List<Role> roles;
 
     @Column(name="rol",length = 60,nullable = false)

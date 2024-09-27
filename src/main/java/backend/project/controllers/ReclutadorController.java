@@ -69,7 +69,7 @@ public class ReclutadorController {
     @GetMapping("/MatchReclutador")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
     public List<ReclutadorMatchDTO> MatchReclutador() {
-        List<ReclutadorMatchDTO> ReclutadorMatchDTO = rS.reporte09();
-        return ReclutadorMatchDTO;
+        List<ReclutadorMatchDTO> reclutadorMatchDTO = rS.reporte09();
+        return reclutadorMatchDTO;
     }
 }

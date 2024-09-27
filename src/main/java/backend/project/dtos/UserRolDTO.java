@@ -1,13 +1,13 @@
 package backend.project.dtos;
 
-public class UsuarioRolDTO {
+public class UserRolDTO {
     private int countusuarios;
     private String rol;
 
-    public UsuarioRolDTO() {
+    public UserRolDTO() {
     }
 
-    public UsuarioRolDTO(int countusuarios, String rol) {
+    public UserRolDTO(int countusuarios, String rol) {
         this.countusuarios = countusuarios;
         this.rol = rol;
     }

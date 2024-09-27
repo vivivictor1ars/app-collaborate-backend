@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
-public interface IUserRepository extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long>{
     public User findByUsername(String username);
     //BUSCAR POR NOMBRE
     @Query("select count(u.username) from User u where u.username =:username")

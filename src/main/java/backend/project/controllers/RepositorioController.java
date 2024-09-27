@@ -1,5 +1,6 @@
 package backend.project.controllers;
 
+import backend.project.entities.Repositorio;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -9,61 +10,51 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/reclutadores")
+@RequestMapping("/repositorios")
 public class RepositorioController {
     @Autowired
-    private IReclutadorService rS;
+    private IRepositorioService rS;
 
     @PostMapping
-    public void registrar(@RequestBody ReclutadorDTO dto) {
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
+    public void insert(@RequestBody RepositorioDTO dto){
         ModelMapper m = new ModelMapper();
-        Reclutador r = m.map(dto, Reclutador.class);
+        Repositorio r = m.map(dto, Repositorio.class);
         rS.insert(r);
     }
 
-
     @GetMapping
-    public List<ReclutadorDTO> listar() {
-        return rS.listar().stream().map(x->{
-            ModelMapper m=new ModelMapper();
-            return m.map(x,ReclutadorDTO.class);
-
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<RepositorioDTO> list(){
+        return rS.list().stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x, RepositorioDTO.class);
         }).collect(Collectors.toList());
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('RECLUTADOR')")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
     public void delete(@PathVariable("id")Integer id){
         rS.delete(id);
     }
-
     @GetMapping("/{id}")
-    public ReclutadorDTO ListId(@PathVariable("id")Integer id){
+    public RepositorioDTO ListId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
-        ReclutadorDTO dto = m.map(rS.ListId(id), ReclutadorDTO.class);
+        RepositorioDTO dto = m.map(rS.ListId(id), RepositorioDTO.class);
         return dto;
     }
-
     @PutMapping
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('RECLUTADOR')")
-    public void goUpdate(@RequestBody ReclutadorDTO dto){
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
+    public void goUpdate(@RequestBody RepositorioDTO dto){
         ModelMapper m = new ModelMapper();
-        Reclutador r = m.map(dto, Reclutador.class);
+        Repositorio r = m.map(dto, Repositorio.class);
         rS.insert(r);
     }
 
-    @PostMapping("/buscarEmpresa")
-    @ApiOperation(value = "Buscar reclutadores por empresa")
-    public List<ReclutadorDTO> buscar(@RequestBody Empresa empresa) {
-        return rS.buscarEmpresa(empresa).stream().map(x -> {
-            ModelMapper m = new ModelMapper();
-            return m.map(x, ReclutadorDTO.class);
-        }).collect(Collectors.toList());
-    }
-    @GetMapping("/MatchReclutador")
+    @GetMapping("/repositorios-count")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
-    public List<ReclutadorMatchDTO> MatchReclutador() {
-        List<ReclutadorMatchDTO> ReclutadorMatchDTO = rS.reporte09();
-        return ReclutadorMatchDTO;
+    public List<RepositorioEstudianteDTO> obtenerNumRepositorios() {
+        List<RepositorioEstudianteDTO> RepositorioEstudianteDTO = rS.reporte02();
+        return RepositorioEstudianteDTO;
     }
 }

@@ -1,5 +1,6 @@
 package backend.project.controllers;
 
+import backend.project.services.IPuesto_TrabajoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

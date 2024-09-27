@@ -2,6 +2,7 @@ package backend.project.controllers;
 
 import backend.project.entities.Empresa;
 import backend.project.entities.Reclutador;
+import backend.project.services.IReclutadorService;
 import io.swagger.annotations.ApiOperation;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

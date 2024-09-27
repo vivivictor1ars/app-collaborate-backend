@@ -1,6 +1,7 @@
 package backend.project.controllers;
 
 import backend.project.entities.Habilidad;
+import backend.project.services.IHabilidadService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

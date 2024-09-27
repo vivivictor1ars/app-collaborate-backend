@@ -1,7 +1,7 @@
 package backend.project.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.io.Serializable;
 
 

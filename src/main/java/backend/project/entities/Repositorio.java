@@ -1,8 +1,7 @@
 package backend.project.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.time.LocalDate;
 @Entity
 @Table(name = "repositorios")

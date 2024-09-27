@@ -1,7 +1,6 @@
 package backend.project.entities;
 
-import jakarta.persistence.*;
-@Entity
+import javax.persistence.*;@Entity
 @Table(name="Habilidades")
 public class Habilidad {
     @Id

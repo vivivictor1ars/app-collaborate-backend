@@ -1,7 +1,6 @@
 package backend.project.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-@Entity
+import javax.persistence.*;@Entity
 @Table(name = "Institucion_Educativa")
 public class Institucion {
     @Id

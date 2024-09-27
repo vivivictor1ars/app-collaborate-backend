@@ -1,7 +1,6 @@
 package backend.project.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "match")
 public class Match {

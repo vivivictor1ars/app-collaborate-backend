@@ -1,6 +1,5 @@
 package backend.project.entities;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "Empresa")
 public class Empresa {

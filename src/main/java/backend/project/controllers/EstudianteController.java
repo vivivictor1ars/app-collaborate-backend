@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Carrera_Estudiante")
+@RequestMapping("/estudiantes")
 public class EstudianteController {
     @Autowired
     private IEstudianteService eS;

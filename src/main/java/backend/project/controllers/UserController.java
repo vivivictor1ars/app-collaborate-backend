@@ -1,6 +1,7 @@
 package backend.project.controllers;
 
 import backend.project.dtos.UserDTO;
+import backend.project.dtos.UserRolDTO;
 import backend.project.entities.User;
 import backend.project.services.IUserService;
 import org.modelmapper.ModelMapper;

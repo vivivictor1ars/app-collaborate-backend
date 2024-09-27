@@ -1,5 +1,9 @@
 package backend.project.controllers;
 
+import backend.project.security.JwtRequest;
+import backend.project.security.JwtResponse;
+import backend.project.security.JwtTokenUtil;
+import backend.project.serviceimpl.JwtUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,7 +24,7 @@ public class JwtAuthenticationController {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
-    private JwtUserDetailsService userDetailsService;
+    private JwtUserDetailService userDetailsService;
     @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());

@@ -10,5 +10,5 @@ public interface IHabilidadService {
 
     public void delete(int id);
 
-    public Requisito ListId(int id);
+    public Habilidad ListId(int id);
 }

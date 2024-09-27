@@ -4,7 +4,7 @@ import backend.project.entities.Role;
 
 import java.util.List;
 
-public class UsuarioDTO {
+public class UserDTO {
     private Long idUsuario;
     private int dni_Usuario;
     private String username;

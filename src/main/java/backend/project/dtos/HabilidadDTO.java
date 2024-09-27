@@ -1,6 +1,6 @@
 package backend.project.dtos;
 
-public class RequisitoDTO {
+public class HabilidadDTO {
     private int id;
 
     private String descripcion_Requisito;

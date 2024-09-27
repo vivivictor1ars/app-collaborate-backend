@@ -1,5 +1,6 @@
 package backend.project.serviceimpl;
 
+import backend.project.dtos.RepositorioEstudianteDTO;
 import backend.project.entities.Repositorio;
 import backend.project.repositories.IRepositorioRepository;
 import backend.project.services.IRepositorioService;

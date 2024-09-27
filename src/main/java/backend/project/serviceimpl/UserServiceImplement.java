@@ -1,5 +1,6 @@
 package backend.project.serviceimpl;
 
+import backend.project.dtos.UserRolDTO;
 import backend.project.entities.User;
 import backend.project.repositories.IUserRepository;
 import backend.project.services.IUserService;

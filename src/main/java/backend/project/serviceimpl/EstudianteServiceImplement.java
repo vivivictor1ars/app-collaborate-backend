@@ -1,5 +1,6 @@
 package backend.project.serviceimpl;
 
+import backend.project.dtos.*;
 import backend.project.entities.Estudiante;
 import backend.project.repositories.IEstudianteRepository;
 import org.springframework.beans.factory.annotation.Autowired;

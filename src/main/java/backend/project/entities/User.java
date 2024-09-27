@@ -5,28 +5,28 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="usuarios")
+@Table(name="Users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
-    @Column(name="dni_Usuario",length = 6,nullable = false)
-    private int dni_Usuario;
+    private Long idUser;
+    @Column(name="dni_User",length = 6,nullable = false)
+    private int dni_User;
     @Column(name="username", length = 60, nullable = false, unique = true)
     private String username;
-    @Column(name="nombre_Usuario",length = 60,nullable = false)
-    private String nombre_Usuario;
+    @Column(name="nombre_User",length = 60,nullable = false)
+    private String nombre_User;
 
-    @Column(name="correo_Usuario",length = 60,nullable = false)
-    private String correo_Usuario;
-    @Column(name="contrasena_Usuario",length = 60,nullable = false)
-    private String contrasena_Usuario;
+    @Column(name="correo_User",length = 60,nullable = false)
+    private String correo_User;
+    @Column(name="contrasena_User",length = 60,nullable = false)
+    private String contrasena_User;
     private Boolean enabled;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "User_id")
     private List<Role> roles;
 
     @Column(name="rol",length = 60,nullable = false)
@@ -34,32 +34,32 @@ public class User {
     public User() {
     }
 
-    public User(Long idUsuario, int dni_Usuario, String username, String nombre_Usuario, String correo_Usuario, String contrasena_Usuario, Boolean enabled, List<Role> roles, String rol) {
-        this.idUsuario = idUsuario;
-        this.dni_Usuario = dni_Usuario;
+    public User(Long idUser, int dni_User, String username, String nombre_User, String correo_User, String contrasena_User, Boolean enabled, List<Role> roles, String rol) {
+        this.idUser = idUser;
+        this.dni_User = dni_User;
         this.username = username;
-        this.nombre_Usuario = nombre_Usuario;
-        this.correo_Usuario = correo_Usuario;
-        this.contrasena_Usuario = contrasena_Usuario;
+        this.nombre_User = nombre_User;
+        this.correo_User = correo_User;
+        this.contrasena_User = contrasena_User;
         this.enabled = enabled;
         this.roles = roles;
         this.rol = rol;
     }
 
-    public Long getIdUsuario() {
-        return idUsuario;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
-    public int getDni_Usuario() {
-        return dni_Usuario;
+    public int getDni_User() {
+        return dni_User;
     }
 
-    public void setDni_Usuario(int dni_Usuario) {
-        this.dni_Usuario = dni_Usuario;
+    public void setDni_User(int dni_User) {
+        this.dni_User = dni_User;
     }
 
     public String getUsername() {
@@ -70,28 +70,28 @@ public class User {
         this.username = username;
     }
 
-    public String getNombre_Usuario() {
-        return nombre_Usuario;
+    public String getNombre_User() {
+        return nombre_User;
     }
 
-    public void setNombre_Usuario(String nombre_Usuario) {
-        this.nombre_Usuario = nombre_Usuario;
+    public void setNombre_User(String nombre_User) {
+        this.nombre_User = nombre_User;
     }
 
-    public String getCorreo_Usuario() {
-        return correo_Usuario;
+    public String getCorreo_User() {
+        return correo_User;
     }
 
-    public void setCorreo_Usuario(String correo_Usuario) {
-        this.correo_Usuario = correo_Usuario;
+    public void setCorreo_User(String correo_User) {
+        this.correo_User = correo_User;
     }
 
-    public String getContrasena_Usuario() {
-        return contrasena_Usuario;
+    public String getContrasena_User() {
+        return contrasena_User;
     }
 
-    public void setContrasena_Usuario(String contrasena_Usuario) {
-        this.contrasena_Usuario = contrasena_Usuario;
+    public void setContrasena_User(String contrasena_User) {
+        this.contrasena_User = contrasena_User;
     }
 
     public Boolean getEnabled() {

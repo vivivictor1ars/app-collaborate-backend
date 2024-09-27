@@ -1,5 +1,7 @@
 package backend.project.services;
 
+import backend.project.dtos.EmpresaMatchDTO;
+import backend.project.dtos.EmpresaReclutadorDTO;
 import backend.project.entities.Empresa;
 
 import java.util.List;

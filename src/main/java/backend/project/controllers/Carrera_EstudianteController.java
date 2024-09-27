@@ -1,5 +1,6 @@
 package backend.project.controllers;
 
+import backend.project.dtos.Carrera_EstudianteDTO;
 import backend.project.entities.Carrera_Estudiante;
 import backend.project.services.ICarrera_EstudianteService;
 import org.modelmapper.ModelMapper;

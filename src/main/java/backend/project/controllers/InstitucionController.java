@@ -1,5 +1,6 @@
 package backend.project.controllers;
 
+import backend.project.dtos.InstitucionDTO;
 import backend.project.entities.Institucion;
 import backend.project.services.IInstitucionService;
 import org.modelmapper.ModelMapper;

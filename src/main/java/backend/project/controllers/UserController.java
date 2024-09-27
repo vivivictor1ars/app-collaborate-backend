@@ -1,5 +1,7 @@
 package backend.project.controllers;
 
+import backend.project.dtos.UserDTO;
+import backend.project.entities.User;
 import backend.project.services.IUserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 

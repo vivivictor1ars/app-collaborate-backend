@@ -1,5 +1,8 @@
 package backend.project.controllers;
 
+import backend.project.dtos.EmpresaDTO;
+import backend.project.dtos.EmpresaMatchDTO;
+import backend.project.dtos.EmpresaReclutadorDTO;
 import backend.project.entities.Empresa;
 import backend.project.services.IEmpresaService;
 import org.modelmapper.ModelMapper;

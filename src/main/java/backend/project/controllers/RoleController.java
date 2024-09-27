@@ -1,5 +1,6 @@
 package backend.project.controllers;
 
+import backend.project.dtos.RoleDTO;
 import backend.project.entities.Role;
 import backend.project.services.IRoleService;
 import org.modelmapper.ModelMapper;

@@ -1,8 +1,8 @@
 package backend.project.controllers;
 
-import backend.project.dtos.Carrera_EstudianteDTO;
-import backend.project.entities.Carrera_Estudiante;
-import backend.project.services.ICarrera_EstudianteService;
+import backend.project.dtos.*;
+import backend.project.entities.Estudiante;
+import backend.project.services.IEstudianteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,23 +15,20 @@ import java.util.stream.Collectors;
 @RequestMapping("/Carrera_Estudiante")
 public class EstudianteController {
     @Autowired
-    private ICarrera_EstudianteService cS;
+    private IEstudianteService eS;
 
     @PostMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
-    public void registrar(@RequestBody Carrera_EstudianteDTO dto) {
+    public void registrar(@RequestBody EstudianteDTO dto) {
         ModelMapper m = new ModelMapper();
-        Carrera_Estudiante pT = m.map(dto, Carrera_Estudiante.class);
-        cS.insertar(pT);
+        Estudiante e = m.map(dto, Estudiante.class);
+        eS.insertar(e);
     }
 
-
     @GetMapping
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
-    public List<Carrera_EstudianteDTO> listar() {
-        return cS.listar().stream().map(x->{
+    public List<EstudianteDTO> listar() {
+        return eS.listar().stream().map(x->{
             ModelMapper m=new ModelMapper();
-            return m.map(x,Carrera_EstudianteDTO.class);
+            return m.map(x,EstudianteDTO.class);
 
         }).collect(Collectors.toList());
     }
@@ -39,22 +36,51 @@ public class EstudianteController {
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
     public void delete(@PathVariable("id")Integer id){
-        cS.delete(id);
+        eS.delete(id);
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAuthority('ADMIN')")
-    public Carrera_EstudianteDTO ListId(@PathVariable("id")Integer id){
+    public EstudianteDTO ListId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
-        Carrera_EstudianteDTO dto = m.map(cS.ListId(id), Carrera_EstudianteDTO.class);
+        EstudianteDTO dto = m.map(eS.ListId(id), EstudianteDTO.class);
         return dto;
     }
 
     @PutMapping
     @PreAuthorize("hasAuthority('ADMIN')")
-    public void goUpdate(@RequestBody Carrera_EstudianteDTO dto){
+    public void goUpdate(@RequestBody EstudianteDTO dto){
         ModelMapper m = new ModelMapper();
-        Carrera_Estudiante pT = m.map(dto, Carrera_Estudiante.class);
-        cS.insertar(pT);
+        Estudiante e = m.map(dto, Estudiante.class);
+        eS.insertar(e);
+    }
+    @GetMapping("/mayoresymenores")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<EstudianteEdadDTO> mayoresymenores() {
+        List<EstudianteEdadDTO> EstudianteEdadDTO = eS.reporte03();
+        return EstudianteEdadDTO;
+    }
+    @GetMapping("/promedioedad")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<EstudianteEdadPromedioDTO> promedioedad() {
+        List<EstudianteEdadPromedioDTO> EstudianteEdadPromedioDTO = eS.reporte04();
+        return EstudianteEdadPromedioDTO;
+    }
+    @GetMapping("/buscapracticasporcentaje")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<EstudiantePracticasDTO> buscapracticasporcentaje() {
+        List<EstudiantePracticasDTO> EstudiantePracticasDTO = eS.reporte05();
+        return EstudiantePracticasDTO;
+    }
+    @GetMapping("/cantidadestudiantesporsemestre")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<EstudianteSemestreDTO> cantidadestudiantesporsemestre() {
+        List<EstudianteSemestreDTO> EstudianteSemestreDTO = eS.reporte06();
+        return EstudianteSemestreDTO;
+    }
+    @GetMapping("/estudiantesporinstitucion")
+    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
+    public List<InstitucionEstudianteDTO> estudiantesporinstitucion() {
+        List<InstitucionEstudianteDTO> InstitucionEstudianteDTO = eS.reporte07();
+        return InstitucionEstudianteDTO;
     }
 }

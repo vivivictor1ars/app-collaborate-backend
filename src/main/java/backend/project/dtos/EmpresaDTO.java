@@ -8,8 +8,6 @@ import lombok.Setter;
 public class EmpresaDTO {
     private int id;  
     private String nombreEmpresa;  
-   
-  
     private String descripcionEmpresa;  
     
   

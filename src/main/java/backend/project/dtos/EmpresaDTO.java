@@ -11,7 +11,7 @@ public class EmpresaDTO {
    
   
     private String descripcionEmpresa;  
-    // Setter para correoEmpresa
+    
     // Getter para correoEmpresa
     private String correoEmpresa;  // Correo de la empresa
 

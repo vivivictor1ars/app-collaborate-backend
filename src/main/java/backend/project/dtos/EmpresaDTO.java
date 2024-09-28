@@ -6,7 +6,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class EmpresaDTO {
-    // Getter para ID
     private int id;  // ID de la empresa
     // Setter para nombreEmpresa
     // Getter para nombreEmpresa

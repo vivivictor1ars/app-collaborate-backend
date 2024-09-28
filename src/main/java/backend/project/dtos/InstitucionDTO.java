@@ -12,5 +12,5 @@ import lombok.AllArgsConstructor;
 public class InstitucionDTO {
     private int id;  
     private String nombreInstitucion;  
-    private String correoInstitucion;  // Correo de la institución
+    private String correoInstitucion;  
 }

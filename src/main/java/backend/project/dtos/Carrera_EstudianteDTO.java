@@ -1,4 +1,4 @@
-package backend.project.dtos
+package backend.project.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -20,7 +20,7 @@ public class RepositorioController {
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
-    public void insert(@RequestBody RepositorioDTO dto){
+    public void insert(@RequestBody RepositorioDTO dto) {
         ModelMapper m = new ModelMapper();
         Repositorio r = m.map(dto, Repositorio.class);
         rS.insert(r);
@@ -28,8 +28,8 @@ public class RepositorioController {
 
     @GetMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
-    public List<RepositorioDTO> list(){
-        return rS.list().stream().map(x->{
+    public List<RepositorioDTO> list() {
+        return rS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, RepositorioDTO.class);
         }).collect(Collectors.toList());
@@ -37,18 +37,20 @@ public class RepositorioController {
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
-    public void delete(@PathVariable("id")Integer id){
+    public void delete(@PathVariable("id") Integer id) {
         rS.delete(id);
     }
+
     @GetMapping("/{id}")
-    public RepositorioDTO ListId(@PathVariable("id")Integer id){
+    public RepositorioDTO ListId(@PathVariable("id") Integer id) {
         ModelMapper m = new ModelMapper();
         RepositorioDTO dto = m.map(rS.ListId(id), RepositorioDTO.class);
         return dto;
     }
+
     @PutMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
-    public void goUpdate(@RequestBody RepositorioDTO dto){
+    public void goUpdate(@RequestBody RepositorioDTO dto) {
         ModelMapper m = new ModelMapper();
         Repositorio r = m.map(dto, Repositorio.class);
         rS.insert(r);

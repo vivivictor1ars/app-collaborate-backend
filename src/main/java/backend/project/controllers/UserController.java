@@ -26,34 +26,37 @@ public class UserController {
     private IUserService uS;
 
 
-
     @GetMapping
-    public List<UserDTO> list(){
-        return uS.list().stream().map(x->{
+    public List<UserDTO> list() {
+        return uS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, UserDTO.class);
         }).collect(Collectors.toList());
     }
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public void delete(@PathVariable("id")long id){
+    public void delete(@PathVariable("id") long id) {
         uS.delete(id);
     }
+
     @GetMapping("/{id}")
-    public UserDTO ListId(@PathVariable("id")long id){
+    public UserDTO ListId(@PathVariable("id") long id) {
         ModelMapper m = new ModelMapper();
         UserDTO dto = m.map(uS.listId(id), UserDTO.class);
         return dto;
     }
+
     @GetMapping("/username/{username}")
-    public UserDTO ListUsername(@PathVariable("username")String name){
+    public UserDTO ListUsername(@PathVariable("username") String name) {
         ModelMapper m = new ModelMapper();
         UserDTO dto = m.map(uS.listUsername(name), UserDTO.class);
         return dto;
     }
+
     @PutMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
-    public void goUpdate(@RequestBody UserDTO dto){
+    public void goUpdate(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
         uS.actualizar(u);
@@ -84,6 +87,7 @@ public class UserController {
         }
         return "usersecurity/listUser";
     }
+
     @GetMapping("/Usersporrol")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
     public List<UserRolDTO> Usersporrol() {

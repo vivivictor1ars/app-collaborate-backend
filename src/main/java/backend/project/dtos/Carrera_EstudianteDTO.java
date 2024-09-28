@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Carrera_EstudianteDTO {
     private int id;  
     private int estudianteId;  
-    // Getter y setter para carreraId
+    
     private int carreraId;  // ID de la carrera
 
     public Carrera_EstudianteDTO() {}

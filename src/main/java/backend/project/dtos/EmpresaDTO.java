@@ -10,7 +10,7 @@ public class EmpresaDTO {
     private String nombreEmpresa;  
    
   
-    private String descripcionEmpresa;  // Descripción de la empresa
+    private String descripcionEmpresa;  
     // Setter para correoEmpresa
     // Getter para correoEmpresa
     private String correoEmpresa;  // Correo de la empresa

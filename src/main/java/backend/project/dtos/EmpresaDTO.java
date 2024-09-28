@@ -13,7 +13,7 @@ public class EmpresaDTO {
     private String descripcionEmpresa;  
     
   
-    private String correoEmpresa;  // Correo de la empresa
+    private String correoEmpresa;  
 
     public EmpresaDTO() {}
 

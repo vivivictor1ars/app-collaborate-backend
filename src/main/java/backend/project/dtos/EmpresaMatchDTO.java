@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class EmpresaMatchDTO {
     private int countEstudiantesMatch;  
-    private String empresa;  // Nombre de la empresa asociada al match
+    private String empresa; 
 
     public void setCountestudiantesmatch(int i) {
     }

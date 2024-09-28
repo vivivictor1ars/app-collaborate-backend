@@ -6,7 +6,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Carrera_EstudianteDTO {
-    // Getter y setter para ID
+    // Getter y 
     private int id;  // ID de la relación
     // Getter y setter para estudianteId
     private int estudianteId;  // ID del estudiante

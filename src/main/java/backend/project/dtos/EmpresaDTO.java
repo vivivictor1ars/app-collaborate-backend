@@ -8,7 +8,7 @@ import lombok.Setter;
 public class EmpresaDTO {
     private int id;  
     private String nombreEmpresa;  
-    // Setter para descripcionEmpresa
+   
     // Getter para descripcionEmpresa
     private String descripcionEmpresa;  // Descripción de la empresa
     // Setter para correoEmpresa

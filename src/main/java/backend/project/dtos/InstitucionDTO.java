@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class InstitucionDTO {
-    private int id;  // ID de la institución
+    private int id;  
     private String nombreInstitucion;  // Nombre de la institución
     private String correoInstitucion;  // Correo de la institución
 }

@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MatchDTO {
-    private int id;  // ID del match
+    private int id;  
     private String codigoMatch;  // Código del match
     private boolean confirmacionMatch;  // Confirmación del match
     private Reclutador reclutador;  // Reclutador asociado al match

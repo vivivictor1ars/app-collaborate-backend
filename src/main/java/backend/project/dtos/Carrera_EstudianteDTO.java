@@ -9,7 +9,7 @@ public class Carrera_EstudianteDTO {
     private int id;  
     private int estudianteId;  
     
-    private int carreraId;  // ID de la carrera
+    private int carreraId;  
 
     public Carrera_EstudianteDTO() {}
 

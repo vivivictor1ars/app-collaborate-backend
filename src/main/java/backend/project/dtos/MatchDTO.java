@@ -16,5 +16,5 @@ public class MatchDTO {
     private String codigoMatch; 
     private boolean confirmacionMatch;  
     private Reclutador reclutador;  
-    private Estudiante estudiante;  // Estudiante asociado al match
+    private Estudiante estudiante;  
 }

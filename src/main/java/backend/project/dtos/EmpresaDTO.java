@@ -12,7 +12,7 @@ public class EmpresaDTO {
   
     private String descripcionEmpresa;  
     
-    // Getter para correoEmpresa
+  
     private String correoEmpresa;  // Correo de la empresa
 
     public EmpresaDTO() {}

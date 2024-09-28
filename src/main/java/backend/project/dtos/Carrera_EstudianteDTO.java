@@ -1,6 +1,7 @@
 package backend.project.dtos;
 
-
+import lombok.Getter;
+import lombok.Setter;
 
 @Setter
 @Getter

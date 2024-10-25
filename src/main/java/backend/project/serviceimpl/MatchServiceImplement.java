@@ -1,6 +1,6 @@
 package backend.project.serviceimpl;
 
-import backend.project.entities.Match;
+import backend.project.entities.Postulacion;
 import backend.project.repositories.IMatchRepository;
 import backend.project.services.IMatchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,11 @@ public class MatchServiceImplement implements IMatchService {
     @Autowired
     private IMatchRepository mR;
     @Override
-    public void insertar(Match match) {
-        mR.save(match);
+    public void insertar(Postulacion postulacion) {
+        mR.save(postulacion);
     }
     @Override
-    public List<Match> listar() {
+    public List<Postulacion> listar() {
         return mR.findAll();
     }
 
@@ -27,7 +27,7 @@ public class MatchServiceImplement implements IMatchService {
     }
 
     @Override
-    public Match ListId(int id) {
-        return mR.findById(id).orElse(new Match());
+    public Postulacion ListId(int id) {
+        return mR.findById(id).orElse(new Postulacion());
     }
 }

@@ -1,7 +1,7 @@
 package backend.project.repositories;
 
-import backend.project.entities.Match;
+import backend.project.entities.Postulacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IMatchRepository extends JpaRepository<Match, Integer> {
+public interface IMatchRepository extends JpaRepository<Postulacion, Integer> {
 }

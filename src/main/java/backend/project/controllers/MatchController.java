@@ -1,7 +1,7 @@
 package backend.project.controllers;
 
 import backend.project.dtos.MatchDTO;
-import backend.project.entities.Match;
+import backend.project.entities.Postulacion;
 import backend.project.services.IMatchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class MatchController {
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")
     public void registrar(@RequestBody MatchDTO dto) {
         ModelMapper m = new ModelMapper();
-        Match mt = m.map(dto, Match.class);
+        Postulacion mt = m.map(dto, Postulacion.class);
         mS.insertar(mt);
     }
 
@@ -53,7 +53,7 @@ public class MatchController {
     @PreAuthorize("hasAuthority('ADMIN')")
     public void goUpdate(@RequestBody MatchDTO dto){
         ModelMapper m = new ModelMapper();
-        Match r = m.map(dto, Match.class);
+        Postulacion r = m.map(dto, Postulacion.class);
         mS.insertar(r);
     }
 }

@@ -3,7 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 @Entity
 @Table(name = "match")
-public class Match {
+public class Postulacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,9 +23,9 @@ public class Match {
     private Estudiante estudiante;
 
 
-    public Match() {}
+    public Postulacion() {}
 
-    public Match(int id, int codigo_match, boolean confirmacion_match, Reclutador reclutador, Estudiante estudiante) {
+    public Postulacion(int id, int codigo_match, boolean confirmacion_match, Reclutador reclutador, Estudiante estudiante) {
         this.id = id;
         this.codigo_match = codigo_match;
         this.confirmacion_match = confirmacion_match;

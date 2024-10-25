@@ -1,15 +1,15 @@
 package backend.project.services;
 
-import backend.project.entities.Match;
+import backend.project.entities.Postulacion;
 
 import java.util.List;
 
 public interface IMatchService {
-    public void insertar(Match match);
+    public void insertar(Postulacion postulacion);
 
-    List<Match> listar();
+    List<Postulacion> listar();
 
     public void delete(int id);
 
-    public Match ListId(int id);
+    public Postulacion ListId(int id);
 }

@@ -1,6 +1,6 @@
 package backend.project.dtos;
 
-import backend.project.entities.Role;
+import backend.project.entities.Authority;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ public class UserDTO {
     private String correo_Usuario;
     private String contrasena_Usuario;
     private Boolean enabled;
-    private List<Role> roles;
+    private List<Authority> authorities;
     private String rol;
 
     public Long getIdUsuario() {
@@ -71,12 +71,12 @@ public class UserDTO {
         this.enabled = enabled;
     }
 
-    public List<Role> getRoles() {
-        return roles;
+    public List<Authority> getRoles() {
+        return authorities;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setRoles(List<Authority> authorities) {
+        this.authorities = authorities;
     }
 
     public String getRol() {

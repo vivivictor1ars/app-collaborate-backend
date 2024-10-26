@@ -1,13 +1,13 @@
 package backend.project.services;
 
-import backend.project.entities.Role;
+import backend.project.entities.Authority;
 
 import java.util.List;
 
 public interface IRoleService {
-    public void insert(Role role);
+    public void insert(Authority authority);
 
-    List<Role> list();
+    List<Authority> list();
 
-    public Role ListId(long id);
+    public Authority ListId(long id);
 }

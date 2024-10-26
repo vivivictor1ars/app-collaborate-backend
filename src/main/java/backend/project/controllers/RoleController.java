@@ -1,7 +1,7 @@
 package backend.project.controllers;
 
 import backend.project.dtos.RoleDTO;
-import backend.project.entities.Role;
+import backend.project.entities.Authority;
 import backend.project.services.IRoleService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class RoleController {
     @PostMapping
     public void insert(@RequestBody RoleDTO dto){
         ModelMapper m = new ModelMapper();
-        Role e = m.map(dto,Role.class);
+        Authority e = m.map(dto, Authority.class);
         rS.insert(e);
     }
 
@@ -43,7 +43,7 @@ public class RoleController {
     @PreAuthorize("hasAuthority('ADMIN')")
     public void goUpdate(@RequestBody RoleDTO dto){
         ModelMapper m = new ModelMapper();
-        Role e = m.map(dto, Role.class);
+        Authority e = m.map(dto, Authority.class);
         rS.insert(e);
     }
 }

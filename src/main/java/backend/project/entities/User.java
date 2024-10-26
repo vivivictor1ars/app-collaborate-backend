@@ -27,14 +27,14 @@ public class User {
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
     @JoinColumn(name = "User_id")
-    private List<Role> roles;
+    private List<Authority> authorities;
 
     @Column(name="rol",length = 60,nullable = false)
     private String rol;
     public User() {
     }
 
-    public User(Long idUser, int dni_User, String username, String nombre_User, String correo_User, String contrasena_User, Boolean enabled, List<Role> roles, String rol) {
+    public User(Long idUser, int dni_User, String username, String nombre_User, String correo_User, String contrasena_User, Boolean enabled, List<Authority> authorities, String rol) {
         this.idUser = idUser;
         this.dni_User = dni_User;
         this.username = username;
@@ -42,7 +42,7 @@ public class User {
         this.correo_User = correo_User;
         this.contrasena_User = contrasena_User;
         this.enabled = enabled;
-        this.roles = roles;
+        this.authorities = authorities;
         this.rol = rol;
     }
 
@@ -102,12 +102,12 @@ public class User {
         this.enabled = enabled;
     }
 
-    public List<Role> getRoles() {
-        return roles;
+    public List<Authority> getRoles() {
+        return authorities;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setRoles(List<Authority> authorities) {
+        this.authorities = authorities;
     }
 
     public String getRol() {

@@ -1,6 +1,6 @@
 package backend.project.serviceimpl;
 
-import backend.project.entities.Role;
+import backend.project.entities.Authority;
 import backend.project.repositories.IRoleRepository;
 import backend.project.services.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,19 +13,19 @@ public class RoleServiceImplement implements IRoleService {
     private IRoleRepository rR;
 
     @Override
-    public void insert(Role role) {
-        rR.save(role);
+    public void insert(Authority authority) {
+        rR.save(authority);
     }
 
     @Override
-    public List<Role> list() {
+    public List<Authority> list() {
         // TODO Auto-generated method stub
         return rR.findAll();
     }
 
 
     @Override
-    public Role ListId(long id) {
-        return rR.findById(id).orElse(new Role());
+    public Authority ListId(long id) {
+        return rR.findById(id).orElse(new Authority());
     }
 }

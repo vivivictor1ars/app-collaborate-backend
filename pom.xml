@@ -12,8 +12,8 @@
 	<artifactId>app-collaborate-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>web-application-final</name>
-	<description>web-application-final</description>
+	<name>app-collaborate-backend</name>
+	<description>app-collaborate-backend</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

@@ -18,19 +18,31 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer dni_User;
     private String username;
-    private String nombre_User;
-    private String correo_User;
-    private String contrasena_User;
+    private String password;
     private Boolean enabled;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
-    @JoinColumn(name = "user_id")
-    private List<Authority> authorities;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_authorities",
+            joinColumns = {
+                @JoinColumn(
+                    name="user_id",
+                    referencedColumnName = "id",
+                    nullable = false
+                )
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(
+                        name="authority_id",
+                        referencedColumnName = "id",
+                        nullable = false
+                    )
+            }
 
-    private String rol;
+    )
+    private List<Authority> authorities;
 }
 
 

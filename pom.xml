@@ -99,6 +99,14 @@
 			<artifactId>jakarta.xml.bind-api</artifactId>
 		</dependency>
 
+		<!-- NoClassDefFoundError: javax/xml/bind/DatatypeConverter] with root cause -->
+		<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>4.0.2</version>
+		</dependency>
+
 		<!-- Necesario desde Java 9+ -->
 		<!-- Runtime, com.sun.xml.bind module -->
 		<dependency>

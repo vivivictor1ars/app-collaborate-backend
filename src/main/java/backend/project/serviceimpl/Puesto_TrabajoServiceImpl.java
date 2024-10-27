@@ -1,7 +1,7 @@
 package backend.project.serviceimpl;
 
 import backend.project.entities.Puesto_Trabajo;
-import backend.project.repositories.IPuesto_TrabajoRepository;
+import backend.project.repositories.Puesto_TrabajoRepository;
 import backend.project.services.Puesto_TrabajoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class Puesto_TrabajoServiceImpl implements Puesto_TrabajoService {
     @Autowired
-    private IPuesto_TrabajoRepository pR;
+    private Puesto_TrabajoRepository pR;
     @Override
     public void insertar(Puesto_Trabajo puesto_trabajo) {
         pR.save(puesto_trabajo);

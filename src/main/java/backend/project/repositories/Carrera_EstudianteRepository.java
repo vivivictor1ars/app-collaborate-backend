@@ -1,8 +1,9 @@
 package backend.project.repositories;
 
-import backend.project.entities.Authority;
+import backend.project.entities.Carrera_Estudiante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 @Repository
-public interface IRoleRepository extends JpaRepository<Authority, Long>{
+public interface Carrera_EstudianteRepository extends JpaRepository<Carrera_Estudiante, Integer> {
 }

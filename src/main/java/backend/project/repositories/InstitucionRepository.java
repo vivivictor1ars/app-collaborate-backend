@@ -1,9 +1,9 @@
 package backend.project.repositories;
 
-import backend.project.entities.Puesto_Trabajo;
+import backend.project.entities.Institucion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IPuesto_TrabajoRepository extends JpaRepository<Puesto_Trabajo, Integer> {
+public interface InstitucionRepository extends JpaRepository<Institucion, Integer> {
 }

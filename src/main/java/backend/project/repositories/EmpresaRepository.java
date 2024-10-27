@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IEmpresaRepository extends JpaRepository<Empresa, Integer> {
+public interface EmpresaRepository extends JpaRepository<Empresa, Integer> {
     @Query(value = "SELECT e.nombre_Empresa AS NombreEmpresa, COUNT(r.id) AS CantidadReclutadores " +
             "FROM Empresa e " +
             "LEFT JOIN reclutadores r ON e.id = r.Empresa_id " +

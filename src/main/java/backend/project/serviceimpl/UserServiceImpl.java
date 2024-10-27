@@ -2,7 +2,7 @@ package backend.project.serviceimpl;
 
 import backend.project.dtos.UserRolDTO;
 import backend.project.entities.User;
-import backend.project.repositories.IUserRepository;
+import backend.project.repositories.UserRepository;
 import backend.project.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private IUserRepository uR;
+    private UserRepository uR;
     @Override
     public Integer insert(User user) {
 

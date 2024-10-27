@@ -3,7 +3,7 @@ package backend.project.serviceimpl;
 import backend.project.dtos.EmpresaMatchDTO;
 import backend.project.dtos.EmpresaReclutadorDTO;
 import backend.project.entities.Empresa;
-import backend.project.repositories.IEmpresaRepository;
+import backend.project.repositories.EmpresaRepository;
 import backend.project.services.EmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class EmpresaServiceImpl implements EmpresaService {
     @Autowired
-    private IEmpresaRepository eR;
+    private EmpresaRepository eR;
 
     @Override
     public void insert(Empresa empresa) {

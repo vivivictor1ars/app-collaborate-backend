@@ -2,7 +2,7 @@ package backend.project.serviceimpl;
 
 import backend.project.dtos.RepositorioEstudianteDTO;
 import backend.project.entities.Repositorio;
-import backend.project.repositories.IRepositorioRepository;
+import backend.project.repositories.RepositorioRepository;
 import backend.project.services.RepositorioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class RepositorioServiceImpl implements RepositorioService {
     @Autowired
-    private IRepositorioRepository rR;
+    private RepositorioRepository rR;
 
     @Override
     public void insert(Repositorio repositorio) {

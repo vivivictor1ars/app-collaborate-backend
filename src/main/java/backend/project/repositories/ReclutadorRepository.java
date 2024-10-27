@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IReclutadorRepository extends JpaRepository<Reclutador, Integer> {
+public interface ReclutadorRepository extends JpaRepository<Reclutador, Integer> {
 
     @Query("from Reclutador v where v.empresa =:empresa")
     List<Reclutador> findBynombreEmpresa(@Param("empresa") Empresa empresa);

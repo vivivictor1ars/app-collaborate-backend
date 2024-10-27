@@ -1,12 +1,18 @@
 package backend.project.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "roles", uniqueConstraints = { @UniqueConstraint(columnNames = { "user_id", "rol" }) })
+@Table(name = "Authotities", uniqueConstraints = { @UniqueConstraint(columnNames = { "user_id", "rol" }) })
 public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,31 +25,5 @@ public class Authority implements Serializable {
     @JsonIgnore
     @JoinColumn(name="user_id")
     private User user;
-
-
-    //GETTERS AND SETTERES
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
 }

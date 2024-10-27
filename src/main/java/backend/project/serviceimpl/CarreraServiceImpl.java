@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CarreraServiceImplement implements CarreraService {
+public class CarreraServiceImpl implements CarreraService {
     @Autowired
     private ICarreraRepository eR;
 

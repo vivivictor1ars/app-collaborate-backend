@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class HabilidadServiceImplement implements HabilidadService {
+public class HabilidadServiceImpl implements HabilidadService {
     @Autowired
     private IHabilidadRepository rR;
 

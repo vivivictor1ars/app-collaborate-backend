@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MatchServiceImplement implements PostulacionService {
+public class PostulacionServiceImpl implements PostulacionService {
     @Autowired
     private IMatchRepository mR;
     @Override

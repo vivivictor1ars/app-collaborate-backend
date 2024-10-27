@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class EstudianteServiceImplement implements EstudianteService {
+public class EstudianteServiceImpl implements EstudianteService {
     @Autowired
     private IEstudianteRepository eR;
     @Override

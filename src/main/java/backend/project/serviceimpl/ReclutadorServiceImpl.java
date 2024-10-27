@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ReclutadorServiceImplement implements ReclutadorService {
+public class ReclutadorServiceImpl implements ReclutadorService {
     @Autowired
     private IReclutadorRepository rR;
 

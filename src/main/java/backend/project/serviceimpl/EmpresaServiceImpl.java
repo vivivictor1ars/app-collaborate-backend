@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class EmpresaServiceImplement implements EmpresaService {
+public class EmpresaServiceImpl implements EmpresaService {
     @Autowired
     private IEmpresaRepository eR;
 

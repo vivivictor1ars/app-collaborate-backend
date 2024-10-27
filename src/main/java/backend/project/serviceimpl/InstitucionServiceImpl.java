@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class InstitucionServiceImplement implements InstitucionService {
+public class InstitucionServiceImpl implements InstitucionService {
     @Autowired
     private IInstitucionRepository iR;
 

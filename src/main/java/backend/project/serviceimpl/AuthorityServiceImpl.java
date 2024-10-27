@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class RoleServiceImplement implements AuthorityService {
+public class AuthorityServiceImpl implements AuthorityService {
     @Autowired
     private IRoleRepository rR;
 

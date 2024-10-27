@@ -19,10 +19,8 @@ public class AuthorityServiceImpl implements AuthorityService {
 
     @Override
     public List<Authority> list() {
-        // TODO Auto-generated method stub
         return rR.findAll();
     }
-
 
     @Override
     public Authority ListId(long id) {

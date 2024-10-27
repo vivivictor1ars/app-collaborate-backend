@@ -10,20 +10,6 @@ import java.util.List;
 @Service
 public class AuthorityServiceImpl implements AuthorityService {
     @Autowired
-    private AuthorityRepository rR;
+    AuthorityRepository rR;
 
-    @Override
-    public void insert(Authority authority) {
-        rR.save(authority);
-    }
-
-    @Override
-    public List<Authority> list() {
-        return rR.findAll();
-    }
-
-    @Override
-    public Authority ListId(long id) {
-        return rR.findById(id).orElse(new Authority());
-    }
 }

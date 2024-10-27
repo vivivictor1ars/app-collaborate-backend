@@ -11,24 +11,5 @@ import java.util.List;
 @Service
 public class CarreraServiceImpl implements CarreraService {
     @Autowired
-    private CarreraRepository eR;
-
-    @Override
-    public void insert(Carrera carrera) {
-        eR.save(carrera);
-    }
-    @Override
-    public List<Carrera> list(){
-        return eR.findAll();
-    }
-
-    @Override
-    public void delete(int id) {
-        eR.deleteById(id);
-    }
-
-    @Override
-    public Carrera ListId(int idAuthor) {
-        return eR.findById(idAuthor).orElse(new Carrera());
-    }
+    CarreraRepository eR;
 }

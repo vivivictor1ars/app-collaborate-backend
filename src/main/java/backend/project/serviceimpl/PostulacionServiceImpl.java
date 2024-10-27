@@ -11,23 +11,5 @@ import java.util.List;
 @Service
 public class PostulacionServiceImpl implements PostulacionService {
     @Autowired
-    private PostulacionRepository mR;
-    @Override
-    public void insertar(Postulacion postulacion) {
-        mR.save(postulacion);
-    }
-    @Override
-    public List<Postulacion> listar() {
-        return mR.findAll();
-    }
-
-    @Override
-    public void delete(int id) {
-        mR.deleteById(id);
-    }
-
-    @Override
-    public Postulacion ListId(int id) {
-        return mR.findById(id).orElse(new Postulacion());
-    }
+    PostulacionRepository mR;
 }

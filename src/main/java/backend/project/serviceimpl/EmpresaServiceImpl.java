@@ -1,7 +1,5 @@
 package backend.project.serviceimpl;
 
-import backend.project.dtos.EmpresaMatchDTO;
-import backend.project.dtos.EmpresaReclutadorDTO;
 import backend.project.entities.Empresa;
 import backend.project.repositories.EmpresaRepository;
 import backend.project.services.EmpresaService;

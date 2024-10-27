@@ -1,6 +1,5 @@
 package backend.project.controllers;
 
-import backend.project.dtos.MatchDTO;
 import backend.project.entities.Postulacion;
 import backend.project.services.PostulacionService;
 import org.modelmapper.ModelMapper;

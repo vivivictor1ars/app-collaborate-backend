@@ -1,7 +1,5 @@
 package backend.project.controllers;
 
-import backend.project.dtos.RepositorioDTO;
-import backend.project.dtos.RepositorioEstudianteDTO;
 import backend.project.entities.Repositorio;
 import backend.project.services.RepositorioService;
 import org.modelmapper.ModelMapper;

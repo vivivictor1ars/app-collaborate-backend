@@ -1,6 +1,5 @@
 package backend.project.services;
 
-import backend.project.dtos.UserRolDTO;
 import backend.project.entities.User;
 
 import java.util.List;

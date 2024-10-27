@@ -1,6 +1,5 @@
 package backend.project.services;
 
-import backend.project.dtos.ReclutadorMatchDTO;
 import backend.project.entities.Empresa;
 import backend.project.entities.Reclutador;
 

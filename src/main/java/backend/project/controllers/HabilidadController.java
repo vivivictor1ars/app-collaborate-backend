@@ -1,6 +1,5 @@
 package backend.project.controllers;
 
-import backend.project.dtos.HabilidadDTO;
 import backend.project.entities.Habilidad;
 import backend.project.services.HabilidadService;
 import org.modelmapper.ModelMapper;

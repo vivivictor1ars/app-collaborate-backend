@@ -1,6 +1,5 @@
 package backend.project.controllers;
 
-import backend.project.dtos.Puesto_TrabajoDTO;
 import backend.project.entities.Puesto_Trabajo;
 import backend.project.services.Puesto_TrabajoService;
 import org.modelmapper.ModelMapper;

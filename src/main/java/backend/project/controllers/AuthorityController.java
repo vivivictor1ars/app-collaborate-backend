@@ -1,6 +1,5 @@
 package backend.project.controllers;
 
-import backend.project.dtos.RoleDTO;
 import backend.project.entities.Authority;
 import backend.project.services.AuthorityService;
 import org.modelmapper.ModelMapper;

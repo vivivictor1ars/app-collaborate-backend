@@ -21,7 +21,7 @@ public class Authority {
     private String name;
 
     @JsonIgnore
-    @ManyToOne(mappedBy = "authorities")
+    @ManyToMany(mappedBy = "authorities")
     private List<User> users;
 
 }

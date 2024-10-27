@@ -3,7 +3,7 @@ package backend.project.controllers;
 import backend.project.dtos.RepositorioDTO;
 import backend.project.dtos.RepositorioEstudianteDTO;
 import backend.project.entities.Repositorio;
-import backend.project.services.IRepositorioService;
+import backend.project.services.RepositorioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/repositorios")
 public class RepositorioController {
     @Autowired
-    private IRepositorioService rS;
+    private RepositorioService rS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")

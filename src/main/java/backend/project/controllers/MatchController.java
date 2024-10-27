@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.MatchDTO;
 import backend.project.entities.Postulacion;
-import backend.project.services.IMatchService;
+import backend.project.services.PostulacionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/match")
 public class MatchController {
     @Autowired
-    private IMatchService mS;
+    private PostulacionService mS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE') or hasAuthority('RECLUTADOR')")

@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.InstitucionDTO;
 import backend.project.entities.Institucion;
-import backend.project.services.IInstitucionService;
+import backend.project.services.InstitucionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/Institucion_Educativa")
 public class InstitucionController {
     @Autowired
-    private IInstitucionService iS;
+    private InstitucionService iS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN')")

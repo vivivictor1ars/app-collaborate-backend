@@ -5,7 +5,7 @@ import backend.project.entities.Estudiante;
 
 import java.util.List;
 
-public interface IEstudianteService {
+public interface EstudianteService {
     public void insertar(Estudiante estudiante);
 
     List<Estudiante> listar();

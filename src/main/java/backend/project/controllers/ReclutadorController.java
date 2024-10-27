@@ -4,7 +4,7 @@ import backend.project.dtos.ReclutadorDTO;
 import backend.project.dtos.ReclutadorMatchDTO;
 import backend.project.entities.Empresa;
 import backend.project.entities.Reclutador;
-import backend.project.services.IReclutadorService;
+import backend.project.services.ReclutadorService;
 import io.swagger.annotations.ApiOperation;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/reclutadores")
 public class ReclutadorController {
     @Autowired
-    private IReclutadorService rS;
+    private ReclutadorService rS;
 
     @PostMapping
     public void registrar(@RequestBody ReclutadorDTO dto) {

@@ -4,7 +4,7 @@ import backend.project.entities.Postulacion;
 
 import java.util.List;
 
-public interface IMatchService {
+public interface PostulacionService {
     public void insertar(Postulacion postulacion);
 
     List<Postulacion> listar();

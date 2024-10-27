@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.Puesto_TrabajoDTO;
 import backend.project.entities.Puesto_Trabajo;
-import backend.project.services.IPuesto_TrabajoService;
+import backend.project.services.Puesto_TrabajoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/puesto_trabajos")
 public class Puesto_TrabajoController {
     @Autowired
-    private IPuesto_TrabajoService pS;
+    private Puesto_TrabajoService pS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('RECLUTADOR')")

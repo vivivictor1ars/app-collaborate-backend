@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.RoleDTO;
 import backend.project.entities.Authority;
-import backend.project.services.IRoleService;
+import backend.project.services.AuthorityService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/roles")
 public class RoleController {
     @Autowired
-    private IRoleService rS;
+    private AuthorityService rS;
 
     @PostMapping
     public void insert(@RequestBody RoleDTO dto){

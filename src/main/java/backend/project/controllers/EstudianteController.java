@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.*;
 import backend.project.entities.Estudiante;
-import backend.project.services.IEstudianteService;
+import backend.project.services.EstudianteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/estudiantes")
 public class EstudianteController {
     @Autowired
-    private IEstudianteService eS;
+    private EstudianteService eS;
 
     @PostMapping
     public void registrar(@RequestBody EstudianteDTO dto) {

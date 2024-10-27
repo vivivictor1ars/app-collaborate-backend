@@ -4,7 +4,7 @@ import backend.project.dtos.EmpresaDTO;
 import backend.project.dtos.EmpresaMatchDTO;
 import backend.project.dtos.EmpresaReclutadorDTO;
 import backend.project.entities.Empresa;
-import backend.project.services.IEmpresaService;
+import backend.project.services.EmpresaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/Empresa")
 public class EmpresaController {
     @Autowired
-    private IEmpresaService aS;
+    private EmpresaService aS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN')")

@@ -2,14 +2,14 @@ package backend.project.serviceimpl;
 
 import backend.project.entities.Postulacion;
 import backend.project.repositories.IMatchRepository;
-import backend.project.services.IMatchService;
+import backend.project.services.PostulacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class MatchServiceImplement implements IMatchService {
+public class MatchServiceImplement implements PostulacionService {
     @Autowired
     private IMatchRepository mR;
     @Override

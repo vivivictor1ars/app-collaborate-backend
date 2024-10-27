@@ -4,7 +4,7 @@ import backend.project.entities.Institucion;
 
 import java.util.List;
 
-public interface IInstitucionService {
+public interface InstitucionService {
     public void insert(Institucion institucion);
     List<Institucion> list();
 

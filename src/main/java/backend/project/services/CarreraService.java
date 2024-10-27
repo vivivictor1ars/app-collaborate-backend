@@ -4,7 +4,7 @@ import backend.project.entities.Carrera;
 
 import java.util.List;
 
-public interface ICarreraService {
+public interface CarreraService {
     public void insert(Carrera carrera);
     List<Carrera> list();
 

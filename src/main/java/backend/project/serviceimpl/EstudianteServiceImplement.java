@@ -3,7 +3,7 @@ package backend.project.serviceimpl;
 import backend.project.dtos.*;
 import backend.project.entities.Estudiante;
 import backend.project.repositories.IEstudianteRepository;
-import backend.project.services.IEstudianteService;
+import backend.project.services.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class EstudianteServiceImplement implements IEstudianteService {
+public class EstudianteServiceImplement implements EstudianteService {
     @Autowired
     private IEstudianteRepository eR;
     @Override

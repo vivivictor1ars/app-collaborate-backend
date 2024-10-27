@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.HabilidadDTO;
 import backend.project.entities.Habilidad;
-import backend.project.services.IHabilidadService;
+import backend.project.services.HabilidadService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/Habilidades")
 public class HabilidadController {
     @Autowired
-    private IHabilidadService rS;
+    private HabilidadService rS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('RECLUTADOR')")

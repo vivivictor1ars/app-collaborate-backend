@@ -2,13 +2,13 @@ package backend.project.serviceimpl;
 
 import backend.project.entities.Authority;
 import backend.project.repositories.IRoleRepository;
-import backend.project.services.IRoleService;
+import backend.project.services.AuthorityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class RoleServiceImplement implements IRoleService {
+public class RoleServiceImplement implements AuthorityService {
     @Autowired
     private IRoleRepository rR;
 

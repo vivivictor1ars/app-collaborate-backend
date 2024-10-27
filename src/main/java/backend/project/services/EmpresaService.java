@@ -6,7 +6,7 @@ import backend.project.entities.Empresa;
 
 import java.util.List;
 
-public interface IEmpresaService {
+public interface EmpresaService {
     public void insert(Empresa empresa);
     List<Empresa> list();
 

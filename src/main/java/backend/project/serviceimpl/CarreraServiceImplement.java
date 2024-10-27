@@ -2,14 +2,14 @@ package backend.project.serviceimpl;
 
 import backend.project.entities.Carrera;
 import backend.project.repositories.ICarreraRepository;
-import backend.project.services.ICarreraService;
+import backend.project.services.CarreraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CarreraServiceImplement implements ICarreraService {
+public class CarreraServiceImplement implements CarreraService {
     @Autowired
     private ICarreraRepository eR;
 

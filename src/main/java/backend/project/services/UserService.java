@@ -5,7 +5,7 @@ import backend.project.entities.User;
 
 import java.util.List;
 
-public interface IUserService {
+public interface UserService {
     public Integer insert(User user);
     public void actualizar(User user);
     List<User> list();

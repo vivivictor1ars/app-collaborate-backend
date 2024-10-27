@@ -2,7 +2,7 @@ package backend.project.controllers;
 
 import backend.project.dtos.CarreraDTO;
 import backend.project.entities.Carrera;
-import backend.project.services.ICarreraService;
+import backend.project.services.CarreraService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/Carreras")
 public class CarreraController {
     @Autowired
-    private ICarreraService aS;
+    private CarreraService aS;
 
     @PostMapping
     @PreAuthorize("hasAuthority('ADMIN')")

@@ -2,14 +2,14 @@ package backend.project.serviceimpl;
 
 import backend.project.entities.Puesto_Trabajo;
 import backend.project.repositories.IPuesto_TrabajoRepository;
-import backend.project.services.IPuesto_TrabajoService;
+import backend.project.services.Puesto_TrabajoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Puesto_TrabajoServiceImplement implements IPuesto_TrabajoService {
+public class Puesto_TrabajoServiceImplement implements Puesto_TrabajoService {
     @Autowired
     private IPuesto_TrabajoRepository pR;
     @Override

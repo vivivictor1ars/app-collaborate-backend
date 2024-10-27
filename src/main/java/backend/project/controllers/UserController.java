@@ -3,7 +3,7 @@ package backend.project.controllers;
 import backend.project.dtos.UserDTO;
 import backend.project.dtos.UserRolDTO;
 import backend.project.entities.User;
-import backend.project.services.IUserService;
+import backend.project.services.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,7 +23,7 @@ public class UserController {
     @Autowired
     private PasswordEncoder bcrypt;
     @Autowired
-    private IUserService uS;
+    private UserService uS;
 
 
     @GetMapping

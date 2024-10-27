@@ -4,7 +4,7 @@ import backend.project.entities.Authority;
 
 import java.util.List;
 
-public interface IRoleService {
+public interface AuthorityService {
     public void insert(Authority authority);
 
     List<Authority> list();

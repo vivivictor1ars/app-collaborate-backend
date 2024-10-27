@@ -4,7 +4,7 @@ import backend.project.dtos.ReclutadorMatchDTO;
 import backend.project.entities.Empresa;
 import backend.project.entities.Reclutador;
 import backend.project.repositories.IReclutadorRepository;
-import backend.project.services.IReclutadorService;
+import backend.project.services.ReclutadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ReclutadorServiceImplement implements IReclutadorService {
+public class ReclutadorServiceImplement implements ReclutadorService {
     @Autowired
     private IReclutadorRepository rR;
 

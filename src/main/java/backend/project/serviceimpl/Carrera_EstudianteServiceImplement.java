@@ -2,14 +2,14 @@ package backend.project.serviceimpl;
 
 import backend.project.entities.Carrera_Estudiante;
 import backend.project.repositories.ICarrera_EstudianteRepository;
-import backend.project.services.ICarrera_EstudianteService;
+import backend.project.services.Carrera_EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Carrera_EstudianteServiceImplement implements ICarrera_EstudianteService {
+public class Carrera_EstudianteServiceImplement implements Carrera_EstudianteService {
     @Autowired
     private ICarrera_EstudianteRepository cR;
     @Override

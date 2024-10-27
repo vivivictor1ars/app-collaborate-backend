@@ -4,7 +4,7 @@ import backend.project.entities.Carrera_Estudiante;
 
 import java.util.List;
 
-public interface ICarrera_EstudianteService {
+public interface Carrera_EstudianteService {
     public void insertar(Carrera_Estudiante carreras_estudiante);
 
     List<Carrera_Estudiante> listar();

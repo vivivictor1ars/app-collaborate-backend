@@ -5,7 +5,7 @@ import backend.project.entities.Repositorio;
 
 import java.util.List;
 
-public interface IRepositorioService {
+public interface RepositorioService {
     public void insert(Repositorio repositorio);
 
     List<Repositorio> list();

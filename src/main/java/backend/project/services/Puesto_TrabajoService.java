@@ -4,7 +4,7 @@ import backend.project.entities.Puesto_Trabajo;
 
 import java.util.List;
 
-public interface IPuesto_TrabajoService {
+public interface Puesto_TrabajoService {
     public void insertar(Puesto_Trabajo puesto_trabajo);
 
     List<Puesto_Trabajo> listar();

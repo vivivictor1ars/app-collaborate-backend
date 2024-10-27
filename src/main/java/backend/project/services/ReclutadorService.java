@@ -6,7 +6,7 @@ import backend.project.entities.Reclutador;
 
 import java.util.List;
 
-public interface IReclutadorService {
+public interface ReclutadorService {
     public void insert(Reclutador reclutador);
 
     List<Reclutador> listar();

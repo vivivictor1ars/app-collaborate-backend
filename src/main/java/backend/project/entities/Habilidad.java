@@ -15,6 +15,7 @@ public class Habilidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private  String descripcion_Habilidad;
 
 }

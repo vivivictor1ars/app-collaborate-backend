@@ -20,7 +20,9 @@ public class Authority implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String rol;
+
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name="user_id")

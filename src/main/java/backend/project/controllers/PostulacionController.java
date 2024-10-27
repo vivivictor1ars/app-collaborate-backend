@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/match")
-public class MatchController {
+public class PostulacionController {
     @Autowired
     private PostulacionService mS;
 

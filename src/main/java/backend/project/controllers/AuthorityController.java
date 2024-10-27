@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @RestController
 @SessionAttributes
 @RequestMapping("/roles")
-public class RoleController {
+public class AuthorityController {
     @Autowired
     private AuthorityService rS;
 

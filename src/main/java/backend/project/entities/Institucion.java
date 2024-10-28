@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,4 +21,8 @@ public class Institucion {
 
     private  String nombre_Institucion;
     private  String correo_Institucion;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "institucion", fetch = FetchType.EAGER)
+    private List<Estudiante> estudiantes;
 }

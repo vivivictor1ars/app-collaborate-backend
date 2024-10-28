@@ -19,11 +19,11 @@ public class Carrera_Estudiante {
 
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "Estudiante_id")
+    @JoinColumn(name = "estudiante_id")
     private Estudiante estudiante;
 
-    @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "Carrera_id")
+    @ManyToOne
+    @JoinColumn(name = "carrera_id")
     private Carrera carrera;
 }

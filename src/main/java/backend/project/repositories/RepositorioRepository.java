@@ -1,6 +1,6 @@
 package backend.project.repositories;
 
-import backend.project.entities.Repositorio;
+import backend.project.entities.Portafolio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RepositorioRepository extends JpaRepository<Repositorio, Integer> {
+public interface RepositorioRepository extends JpaRepository<Portafolio, Integer> {
     @Query(value = "SELECT u.Nombre_User AS NombreEstudiante, e.Edad_estudiante AS Edad, e.Practicante_estudiante AS PracticanteEstudiante, COUNT(r.id) AS CantidadRepositorios\n" +
             "FROM users u\n" +
             "JOIN estudiantes e ON u.id_user = e.user_id\n" +

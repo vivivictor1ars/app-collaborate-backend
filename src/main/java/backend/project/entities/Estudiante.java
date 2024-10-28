@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,13 +25,16 @@ public class Estudiante {
     private Boolean practicante_Estudiante;
     private String descripcion_Estudiante;
 
-    @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "Institucion_educativa_id")
-    private Institucion institucion_Estudiante;
+    @ManyToOne
+    @JoinColumn(name = "institucion_id")
+    private Institucion institucion;
 
-    @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "Usuario_id")
-    private User user_Estudiante;
+    @OneToMany(mappedBy = "carrera_estudiante", fetch = FetchType.EAGER)
+    private List<Carrera_Estudiante> carreras_estudiantes;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "estudiante", fetch = FetchType.EAGER)
+    private List<Portafolio> portafolios;
 }

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name = "Repositorios")
-public class Repositorio {
+public class Portafolio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,8 +23,8 @@ public class Repositorio {
     private String enlaceRepositorio;
     private LocalDate fechaRepositorio;
 
-    @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "idEstudiante")
+    @ManyToOne
+    @JoinColumn(name = "estudiante_id")
     private Estudiante estudiante;
 }

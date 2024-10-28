@@ -1,5 +1,6 @@
 package backend.project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,8 +18,13 @@ public class Cuenta {
     private Long id;
 
     private Integer dni;
-    private String nombre;
+    private String name;
     private String correo;
-    private Integer telefono;
+    private Integer telephone;
     private String type;
+
+    @JsonIgnore
+    @OneToOne
+    @JoinColumn(name="user_id")
+    private User user;
 }

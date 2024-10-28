@@ -16,14 +16,15 @@ public class Reclutador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String Descripcion_Reclutador;
+
+    private String description;
 
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
 
-    @ManyToOne
+    @OneToOne
     @JsonIgnore
     @JoinColumn(name = "user_id")
     private User user;

@@ -1,10 +1,13 @@
 package backend.project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +19,11 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private  String nombre_Empresa;
-    private  String descripcion_Empresa;
-    private  String correo_Empresa;
+    private  String name;
+    private  String description;
+    private  String correo;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "empresa", fetch = FetchType.EAGER)
+    private List<Reclutador> reclutadores;
 }

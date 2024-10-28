@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="Estudiantes")
+@Table(name = "Estudiantes")
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ public class Estudiante {
     private Institucion institucion;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "carrera_estudiante", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "estudiante", fetch = FetchType.EAGER)
     private List<Carrera_Estudiante> carreras_estudiantes;
 
     @JsonIgnore

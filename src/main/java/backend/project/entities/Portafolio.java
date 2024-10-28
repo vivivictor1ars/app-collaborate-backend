@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Data
@@ -18,10 +19,10 @@ public class Portafolio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String nombreRepositorio;
-    private String descripcionRepositorio;
-    private String enlaceRepositorio;
-    private LocalDate fechaRepositorio;
+    private String name;
+    private String description;
+    private String link;
+    private LocalDate date;
 
     @JsonIgnore
     @ManyToOne

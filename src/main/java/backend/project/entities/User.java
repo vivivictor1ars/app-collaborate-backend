@@ -23,6 +23,14 @@ public class User {
     private Boolean enabled;
 
     @JsonIgnore
+    @OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+    private Cuenta cuenta;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+    private Reclutador reclutador;
+
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_authorities",

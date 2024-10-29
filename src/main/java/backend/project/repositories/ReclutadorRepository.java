@@ -12,13 +12,9 @@ import java.util.List;
 
 @Repository
 public interface ReclutadorRepository extends JpaRepository<Reclutador, Integer> {
-
+    @Query(nativeQuery = true, value= "SELECT e.name AS name +" +
+            "FROM Empresa e +" +
+            "JOIN Reclutador r ON e.id = r.empresa_id +" +
+            "GROUP BY e.name;")
     public List<Reclutador> findByNameEmpresa(Empresa empresa);
-
-    @Query(value = "select count(distinct m.estudiante_id) as EstudiantesMatch, u.nombre_user as Reclutador\n" +
-            "from match m\n" +
-            "join reclutadores r on r.id=m.reclutador_id\n" +
-            "join users u on r.user_id=u.id_user\n" +
-            "group by u.nombre_user", nativeQuery = true)
-    List<String[]> MatchReclutador();
 }

@@ -9,16 +9,9 @@ import java.util.List;
 
 @Repository
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
-    @Query(value = "SELECT e.nombre_Empresa AS NombreEmpresa, COUNT(r.id) AS CantidadReclutadores " +
+    @Query(value = "SELECT e.name AS name, COUNT(r.id) AS cantReclutadores " +
             "FROM Empresa e " +
-            "LEFT JOIN reclutadores r ON e.id = r.Empresa_id " +
-            "GROUP BY e.nombre_Empresa", nativeQuery = true)
+            "LEFT JOIN Reclutador r ON e.id = r.empresa_id " +
+            "GROUP BY e.name", nativeQuery = true)
     List<String[]> obtenerNumeroReclutadoresEmpresa();
-
-    @Query(value = "select count(distinct m.estudiante_id) as EstudiantesMatch, e.nombre_empresa as Empresa\n" +
-            "from match m\n" +
-            "join reclutadores r on r.id=m.reclutador_id\n" +
-            "join empresa e on r.empresa_id=e.id\n" +
-            "group by e.nombre_empresa", nativeQuery = true)
-    List<String[]> MatchEmpresa();
 }

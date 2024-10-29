@@ -15,11 +15,10 @@ import jakarta.persistence.*;
 public class Postulacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigo_match;
-    @Column(name = "confirmacion_match", length = 60, nullable = false)
-    private boolean confirmacion_match;
+    private Long id;
+
+    private Integer number_postulacion;
+    private Boolean confirmation;
 
     @ManyToOne
     @JsonIgnore

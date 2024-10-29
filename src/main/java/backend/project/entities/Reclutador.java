@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,6 +20,14 @@ public class Reclutador {
     private int id;
 
     private String description;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "reclutador", fetch = FetchType.EAGER)
+    private List<Postulacion> postulaciones;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "reclutador", fetch = FetchType.EAGER)
+    private List<Puesto_Trabajo> puestos_trabajos;
 
     @ManyToOne
     @JsonIgnore

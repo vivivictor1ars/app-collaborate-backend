@@ -31,6 +31,10 @@ public class User {
     private Reclutador reclutador;
 
     @JsonIgnore
+    @OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+    private Estudiante estudiante;
+
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_authorities",

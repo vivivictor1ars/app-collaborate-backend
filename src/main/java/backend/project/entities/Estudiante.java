@@ -19,11 +19,11 @@ public class Estudiante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer semestre_Estudiante;
-    private Integer edad_Estudiante;
-    private String genero_Estudiante;
-    private Boolean practicante_Estudiante;
-    private String descripcion_Estudiante;
+    private Integer semestre;
+    private Integer edad;
+    private String genero;
+    private Boolean practicante;
+    private String description;
 
     @JsonIgnore
     @ManyToOne

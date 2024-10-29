@@ -19,8 +19,8 @@ public class Institucion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private  String nombre_Institucion;
-    private  String correo_Institucion;
+    private  String name;
+    private  String correo;
 
     @JsonIgnore
     @OneToMany(mappedBy = "institucion", fetch = FetchType.EAGER)

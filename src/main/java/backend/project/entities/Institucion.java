@@ -17,7 +17,7 @@ import java.util.List;
 public class Institucion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private  String nombre_Institucion;
     private  String correo_Institucion;

@@ -15,7 +15,7 @@ import jakarta.persistence.*;
 public class Carrera_Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JsonIgnore

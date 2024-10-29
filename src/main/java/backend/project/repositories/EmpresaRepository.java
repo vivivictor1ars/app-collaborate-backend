@@ -13,5 +13,5 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
             "FROM Empresa e " +
             "LEFT JOIN Reclutador r ON e.id = r.empresa_id " +
             "GROUP BY e.name", nativeQuery = true)
-    List<String[]> obtenerNumeroReclutadoresEmpresa();
+    List<String[]> getNumberOfReclutadoresEmpresa();
 }

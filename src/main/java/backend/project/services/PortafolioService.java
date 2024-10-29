@@ -1,5 +1,5 @@
 package backend.project.services;
 
-public interface RepositorioService {
+public interface PortafolioService {
 
 }

@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InstitucionRepository extends JpaRepository<Institucion, Integer> {
+public interface InstitucionRepository extends JpaRepository<Institucion, Long> {
+    public Institucion findByName(String name);
 }

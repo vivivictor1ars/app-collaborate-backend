@@ -13,8 +13,7 @@ import java.util.List;
 @Repository
 public interface ReclutadorRepository extends JpaRepository<Reclutador, Integer> {
 
-    @Query("from Reclutador v where v.empresa =:empresa")
-    List<Reclutador> findBynombreEmpresa(@Param("empresa") Empresa empresa);
+    public List<Reclutador> findByNameEmpresa(Empresa empresa);
 
     @Query(value = "select count(distinct m.estudiante_id) as EstudiantesMatch, u.nombre_user as Reclutador\n" +
             "from match m\n" +

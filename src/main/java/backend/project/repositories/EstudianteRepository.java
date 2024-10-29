@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EstudianteRepository extends JpaRepository<Estudiante, Integer> {
+public interface EstudianteRepository extends JpaRepository<Estudiante, Long> {
     @Query(value = "select count(e.id_estudiante) as cantidadestudiante, e.semestre_estudiante as Semestre\n" +
             "FROM estudiantes e\n" +
             "GROUP BY e.semestre_estudiante;", nativeQuery = true)

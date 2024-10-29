@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HabilidadRepository extends JpaRepository<Habilidad, Integer> {
-
+    public Habilidad findByDescription(String description);
 }

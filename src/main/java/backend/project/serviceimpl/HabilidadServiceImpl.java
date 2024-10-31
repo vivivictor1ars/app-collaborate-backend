@@ -6,10 +6,18 @@ import backend.project.services.HabilidadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class HabilidadServiceImpl implements HabilidadService {
     @Autowired
-    HabilidadRepository rR;
+    HabilidadRepository habilidadRepository;
+
+    @Override
+    public Habilidad addHabilidad(Habilidad habilidad) {
+        return habilidadRepository.save(habilidad);
+    }
+
+    @Override
+    public void deleteHabilidad(String id) {
+        habilidadRepository.deleteById(Integer.parseInt(id));
+    }
 }

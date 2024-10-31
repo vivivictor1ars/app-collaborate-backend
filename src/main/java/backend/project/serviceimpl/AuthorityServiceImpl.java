@@ -6,10 +6,13 @@ import backend.project.services.AuthorityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 @Service
 public class AuthorityServiceImpl implements AuthorityService {
     @Autowired
-    AuthorityRepository rR;
+    AuthorityRepository authorityRepository;
 
+    @Override
+    public Authority addAuthority(Authority authority) {
+        return authorityRepository.save(authority);
+    }
 }

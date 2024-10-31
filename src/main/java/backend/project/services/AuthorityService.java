@@ -1,9 +1,9 @@
 package backend.project.services;
 
 import backend.project.entities.Authority;
-
-import java.util.List;
+import backend.project.repositories.AuthorityRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public interface AuthorityService {
-
+    public Authority addAuthority(Authority authority);
 }

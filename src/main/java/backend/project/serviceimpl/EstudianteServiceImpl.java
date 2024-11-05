@@ -28,7 +28,7 @@ public class EstudianteServiceImpl implements EstudianteService {
     @Override
     public List<EstudianteEdadDTO> reporteEdades() {
         List<String[]> mayoresymenores = estudianteRepository.mayoresYmenores();
-        List<EstudianteEdadDTO> EstudianteEdadDTOs=new ArrayList<>();
+        List<EstudianteEdadDTO> EstudianteEdadDTOs = new ArrayList<>();
         for (String[] data : mayoresymenores) {
             EstudianteEdadDTO dto = new EstudianteEdadDTO();
             dto.setMayores(Integer.parseInt(data[0]));
@@ -55,16 +55,47 @@ public class EstudianteServiceImpl implements EstudianteService {
 
     @Override
     public List<EstudiantePracticasDTO> reportePracticas() {
-        return List.of();
+        List<String[]> buscapracticasporcentaje = estudianteRepository.buscaPracticasPorcentaje();
+        List<EstudiantePracticasDTO> EstudiantePracticasDTOs = new ArrayList<>();
+
+        for (String[] data : buscapracticasporcentaje) {
+            EstudiantePracticasDTO dto = new EstudiantePracticasDTO();
+            dto.setBuscaPracticas(Integer.parseInt(data[0]));
+            dto.setNoBuscaPractica(Integer.parseInt(data[1]));
+            EstudiantePracticasDTOs.add(dto);
+        }
+
+        return EstudiantePracticasDTOs;
     }
 
     @Override
     public List<EstudianteSemestreDTO> reporteSemestre() {
-        return List.of();
+        List<String[]> cantidadestudiantesporsemestre = estudianteRepository.cantidadEstudianteBySemestre();
+        List<EstudianteSemestreDTO> EstudianteSemestreDTOs = new ArrayList<>();
+
+        for (String[] data : cantidadestudiantesporsemestre) {
+            EstudianteSemestreDTO dto = new EstudianteSemestreDTO();
+            dto.setCountEstudiantes(Integer.parseInt(data[0]));
+            dto.setSemestre(Integer.parseInt(data[1]));
+            EstudianteSemestreDTOs.add(dto);
+        }
+
+        return EstudianteSemestreDTOs;
     }
 
     @Override
     public List<InstitucionEstudianteDTO> reporteInstitucion() {
-        return List.of();
+        List<String[]> estudiantesporinstitucion = estudianteRepository.estudiantesByInstitucion();
+        List<InstitucionEstudianteDTO> InstitucionEstudianteDTOs = new ArrayList<>();
+
+        for (String[] data : estudiantesporinstitucion) {
+            InstitucionEstudianteDTO dto = new InstitucionEstudianteDTO();
+            dto.setCountEstudiantes(Integer.parseInt(data[0]));
+            dto.setIntitucion(data[1]);
+            InstitucionEstudianteDTOs.add(dto);
+        }
+
+        return InstitucionEstudianteDTOs;
     }
+
 }

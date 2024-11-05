@@ -1,6 +1,5 @@
 package backend.project.serviceimpl;
 
-import backend.project.entities.Institucion;
 import backend.project.repositories.InstitucionRepository;
 import backend.project.services.InstitucionService;
 import org.springframework.beans.factory.annotation.Autowired;
